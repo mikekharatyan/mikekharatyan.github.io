@@ -1,0 +1,29 @@
+.last-news {
+    margin-top: 50px;
+    .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .list {
+        margin-top: 10px;
+        @include breakpoint(md) {
+            display: none;
+        }
+    }
+    .mobile-list {
+        margin-top: 30px;
+        display: none;
+        @include breakpoint(md) {
+            display: block;
+        }
+    }
+    .all-btn {
+        display: none;
+        margin-top: 40px;
+        width: 100%;
+        @include breakpoint(md) {
+            display: flex;
+        }
+    }
+}

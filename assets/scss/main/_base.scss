@@ -1,0 +1,23 @@
+body {
+    scroll-behavior: smooth;
+    min-height: 100vh;
+    &.disabled {
+        overflow: hidden;
+    }
+}
+.overflow-hidden {
+    overflow: hidden;
+}
+html {
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 3px;
+}
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--main);
+}

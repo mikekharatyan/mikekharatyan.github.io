@@ -1,0 +1,40 @@
+.default-btn {
+    &.wide {
+        width: 100%;
+    }
+    &.clean {
+        background-color: var(--w);
+        color: var(--primary);
+        svg {
+            path {
+                stroke: var(--primary);
+            }
+        }
+    }
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    border-radius: 10px;
+    padding: 17px 30px;
+
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--w);
+
+    transition: all 0.2s ease-in-out;
+    svg,
+    img {
+        margin-left: 10px;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+        background-color: var(--hover);
+        svg,
+        img {
+            transform: translateX(6px);
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.hero-section {
+    .wrap {
+        display: flex;
+        align-items: center;
+    }
+    .hero-content {
+        .name {
+            max-width: 645px;
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: 0.9px;
+            color: var(--main);
+            @include breakpoint(xl) {
+                font-size: 26px;
+            }
+            @include breakpoint(md) {
+                font-size: 22px;
+            }
+        }
+        .quote {
+            margin-top: 35px;
+            display: flex;
+            max-width: 545px;
+            svg {
+                min-width: 36px;
+                min-height: 37px;
+                width: 36px;
+                height: 37px;
+                path {
+                    fill: var(--text);
+                }
+            }
+            p {
+                margin-left: 14px;
+                color: var(--text);
+                font-size: 16px;
+                font-weight: 400;
+                span {
+                    font-weight: 500;
+                }
+                @include breakpoint(xl) {
+                    font-size: 15px;
+                }
+                @include breakpoint(md) {
+                    font-size: 14px;
+                }
+            }
+        }
+        .btn {
+            margin-top: 38px;
+            @include breakpoint(md) {
+                width: 100%;
+                margin: 38px auto 0 auto;
+            }
+        }
+    }
+    .hero-illustration {
+        img {
+            width: 100%;
+        }
+        @include breakpoint(md) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+.contacts {
+    margin: 120px 0 70px 0;
+    @include breakpoint(lg) {
+        margin: 50px 0 0 0;
+    }
+    .container {
+        position: relative;
+    }
+    .box {
+        background-color: var(--secondary);
+        border-radius: 10px;
+        padding: 50px 70px;
+        max-width: 700px;
+        width: 100%;
+        @include breakpoint(lg) {
+            padding: 50px 30px;
+            max-width: 100%;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: 500;
+            color: var(--main);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            @include breakpoint(xl) {
+                font-size: 26px;
+            }
+        }
+        .text {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--primary);
+            @include breakpoint(xl) {
+                font-size: 14px;
+            }
+        }
+        .contacts-info {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .info {
+                display: flex;
+                align-items: center;
+                svg {
+                    width: 26px;
+                    height: 26px;
+                    path {
+                        stroke: var(--main);
+                    }
+                    @include breakpoint(xl) {
+                        width: 22px;
+                        height: 22px;
+                    }
+                }
+                p {
+                    margin-left: 7px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: var(--main);
+                    @include breakpoint(xl) {
+                        font-size: 15px;
+                    }
+                    @include breakpoint(md) {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+    .map {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        overflow: hidden;
+        border-radius: 10px;
+        display: inline-flex;
+        @include breakpoint(lg) {
+            position: relative;
+            left: 0;
+            top: 0;
+            transform: none;
+            width: 100%;
+            margin-top: 20px;
+        }
+        iframe {
+            width: 700px;
+            height: 460px;
+            border: 0;
+            @include breakpoint(xl) {
+                width: 600px;
+                height: 400px;
+            }
+            @include breakpoint(lg) {
+                width: 100%;
+            }
+        }
+    }
+}
