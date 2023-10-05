@@ -1,3 +1,42 @@
 .content {
     padding: 40px 0;
 }
+.section-head {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    &.center {
+        justify-content: center;
+    }
+    @include breakpoint(lg) {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section-title {
+        display: inline-block;
+        font-size: 30px;
+        font-weight: 400;
+        color: var(--main);
+        position: relative;
+        height: fit-content;
+        @include breakpoint(xl) {
+            font-size: 28px;
+        }
+        @include breakpoint(lg) {
+            font-size: 26px;
+        }
+        @include breakpoint(md) {
+            font-size: 24px;
+        }
+        &::after {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            width: 100%;
+            height: 8px;
+            left: 0;
+            bottom: 2px;
+            background-color: var(--secondary);
+        }
+    }
+}

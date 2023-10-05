@@ -1,0 +1,51 @@
+.view-news {
+    .news-info {
+        align-items: center;
+        .news-title {
+            font-size: 36px;
+            font-weight: 400;
+            color: var(--main);
+            @include breakpoint(xl) {
+                font-size: 30px;
+            }
+            @include breakpoint(md) {
+                font-size: 22px;
+            }
+        }
+        .news-date {
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--main);
+            svg,
+            img {
+                width: 26px;
+                height: 26px;
+                margin-right: 7px;
+            }
+            @include breakpoint(xl) {
+                font-size: 16px;
+            }
+            @include breakpoint(md) {
+                font-size: 14px;
+                justify-content: flex-end;
+                svg,
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+        .news-img {
+            width: 100%;
+            @include breakpoint(md) {
+                margin-top: 30px;
+            }
+        }
+    }
+    .news-content {
+        margin-top: 40px;
+    }
+}
